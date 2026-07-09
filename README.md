@@ -89,7 +89,7 @@ con validación y tablas de resultados.
 
 ## Ejecución de las pruebas
 
-El proyecto cuenta con **131 pruebas**, que combinan **pruebas unitarias** y
+El proyecto cuenta con **141 pruebas**, que combinan **pruebas unitarias** y
 **pruebas basadas en propiedades** (con [Hypothesis](https://hypothesis.readthedocs.io/)).
 Para ejecutarlas:
 
