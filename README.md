@@ -42,6 +42,51 @@ carga el esquema relacional y precarga los departamentos base del hospital.
 
 ---
 
+## Interfaz Gráfica (CustomTkinter)
+
+Además de la aplicación de consola, el sistema incluye una **interfaz gráfica de
+escritorio moderna** construida con [CustomTkinter](https://customtkinter.tomschimansky.com/).
+La interfaz **reutiliza la misma capa de servicios** que la consola (no duplica
+lógica de negocio) y comparte la misma base de datos `hospital.db`, por lo que
+ambos modos de uso son totalmente compatibles.
+
+La ventana ofrece una barra lateral de navegación con las secciones
+**Departamentos**, **Pacientes**, **Equipos**, **Sesiones de Uso** y
+**Reportes** (incluido el **Indicador de Uso Clínico**), formularios de registro
+con validación y tablas de resultados.
+
+### Windows
+
+- Opción sencilla: haga **doble clic** en el archivo `ejecutar_app.bat`. El
+  lanzador instala automáticamente las dependencias (si faltan) y abre la
+  aplicación.
+- Opción manual, desde una terminal:
+
+  ```bat
+  pip install -r requirements.txt
+  python -m hospital_equipos.gui
+  ```
+
+### macOS / Linux
+
+- Opción sencilla, desde una terminal:
+
+  ```bash
+  ./ejecutar_app.sh
+  ```
+
+- Opción manual:
+
+  ```bash
+  pip install -r requirements.txt
+  python -m hospital_equipos.gui
+  ```
+
+> Nota: la interfaz gráfica requiere un entorno con pantalla (display). La
+> **versión de consola sigue funcionando** con `python -m hospital_equipos.main`.
+
+---
+
 ## Ejecución de las pruebas
 
 El proyecto cuenta con **131 pruebas**, que combinan **pruebas unitarias** y
@@ -67,8 +112,12 @@ new-project/
 │   ├── modelos/                 # Dataclasses del dominio + enums
 │   ├── repositorios/            # Acceso a datos (SQL parametrizado)
 │   ├── servicios/               # Lógica de negocio y validaciones
-│   └── cli/                     # Menú de texto interactivo
+│   ├── cli/                     # Menú de texto interactivo
+│   └── gui/                     # Interfaz gráfica (CustomTkinter) + controlador
 ├── tests/                       # Pruebas unitarias y basadas en propiedades
+├── ejecutar_app.bat             # Lanzador de la GUI para Windows
+├── ejecutar_app.sh              # Lanzador de la GUI para macOS/Linux
+├── requirements.txt             # Dependencias de ejecución (customtkinter)
 ├── pyproject.toml
 └── requirements-dev.txt
 ```
@@ -84,7 +133,7 @@ favorece el mantenimiento y la testeabilidad:
 CLI (Presentación)  →  Servicios (Lógica de negocio)  →  Repositorios (Acceso a datos)  →  SQLite
 ```
 
-- **CLI (Presentación):** menú de texto que captura las opciones del usuario y muestra resultados formateados.
+- **CLI / GUI (Presentación):** el menú de texto y la interfaz gráfica (CustomTkinter) capturan las acciones del usuario y muestran los resultados. Ambas reutilizan exactamente los mismos servicios.
 - **Servicios (Lógica de negocio):** validan datos, aplican reglas del dominio y coordinan operaciones (por ejemplo, el cálculo del Indicador de Uso Clínico).
 - **Repositorios (Acceso a datos):** encapsulan todas las sentencias SQL parametrizadas y traducen entre filas y objetos del dominio.
 - **SQLite (Base de datos):** almacena de forma persistente los datos con integridad referencial (claves primarias y foráneas).
