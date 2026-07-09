@@ -1,0 +1,49 @@
+{
+  "pbtResults": {
+    "5.2 Escribir prueba de propiedad de unicidad de nombres de departamento": {
+      "status": "passed",
+      "lastRunTimestamp": 1783627119961
+    },
+    "6.2 Escribir prueba de propiedad de unicidad de cédula": {
+      "status": "passed",
+      "lastRunTimestamp": 1783627229251
+    },
+    "9.2 Escribir prueba de propiedad de duración positiva": {
+      "status": "passed",
+      "lastRunTimestamp": 1783628000207
+    },
+    "9.3 Escribir prueba de propiedad de integridad referencial de sesiones": {
+      "status": "passed",
+      "lastRunTimestamp": 1783628001213
+    },
+    "9.4 Escribir prueba de propiedad de conteo de sesiones": {
+      "status": "passed",
+      "lastRunTimestamp": 1783628001562
+    },
+    "8.2 Escribir prueba de propiedad de estados válidos": {
+      "status": "passed",
+      "lastRunTimestamp": 1783628028034
+    },
+    "8.3 Escribir prueba de propiedad de unicidad de código de inventario": {
+      "status": "passed",
+      "lastRunTimestamp": 1783628028560
+    },
+    "8.4 Escribir prueba de propiedad de integridad referencial equipo→departamento": {
+      "status": "passed",
+      "lastRunTimestamp": 1783628030351
+    },
+    "11.2 Escribir prueba de propiedad del filtro de mantenimiento": {
+      "status": "passed",
+      "lastRunTimestamp": 1783628399267
+    },
+    "11.4 Escribir prueba de propiedad del orden del indicador (con desempate determinista)": {
+      "status": "passed",
+      "lastRunTimestamp": 1783628400233
+    },
+    "11.5 Escribir prueba de propiedad de la métrica de sesiones del indicador": {
+      "status": "passed",
+      "lastRunTimestamp": 1783628400626
+    }
+  },
+  "executionHistory": {}
+}

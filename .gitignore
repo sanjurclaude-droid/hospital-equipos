@@ -1,0 +1,33 @@
+# Byte-compiled / optimizados
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribución / empaquetado
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# Herramientas de test / cobertura
+.pytest_cache/
+.hypothesis/
+.coverage
+htmlcov/
+.tox/
+
+# Base de datos de la aplicación
+hospital.db
+*.db
+*.sqlite
+*.sqlite3
+
+# Editores / SO
+.vscode/
+.idea/
+.DS_Store
